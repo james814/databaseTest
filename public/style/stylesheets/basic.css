@@ -1,0 +1,181 @@
+@charset "UTF-8";
+/* line 1, ../sass/basic.scss */
+input {
+  font-size: 15px;
+  height: 30px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #bebebe;
+  background-color: rgba(255, 255, 255, 0);
+  letter-spacing: 1px;
+  caret-color: #8b8b8b;
+}
+
+/* line 13, ../sass/basic.scss */
+input::placeholder {
+  color: #cecece;
+  transition: all .5s;
+}
+
+/* line 17, ../sass/basic.scss */
+input:focus::placeholder {
+  color: transparent;
+  transition: all .5s;
+}
+
+/* line 21, ../sass/basic.scss */
+.input-wrap {
+  position: relative;
+}
+
+/* line 24, ../sass/basic.scss */
+button {
+  font-family: 'Courier New', Courier, monospace;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+  letter-spacing: 1px;
+  transition: all .5s;
+}
+
+/* line 35, ../sass/basic.scss */
+.largebtn {
+  width: 200px;
+}
+
+/* line 38, ../sass/basic.scss */
+.mediumbtn {
+  width: 150px;
+}
+
+/* line 41, ../sass/basic.scss */
+.smallbtn {
+  width: 100px;
+}
+
+/* line 44, ../sass/basic.scss */
+.graybtn {
+  color: #222;
+  border-color: #bebebe;
+}
+
+/* line 48, ../sass/basic.scss */
+.graybtn:hover {
+  color: #2ebaae;
+  border-color: #2ebaae;
+  transition: all .5s;
+}
+
+/* line 53, ../sass/basic.scss */
+.block {
+  padding: 50px 40px;
+  position: relative;
+}
+
+/* line 57, ../sass/basic.scss */
+.topic {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: left;
+  color: #8b8b8b;
+  width: 500px;
+  bottom: 30px;
+  left: 350px;
+  position: absolute;
+}
+
+/* line 68, ../sass/basic.scss */
+.success {
+  font-family: "Raleway", Helvetica, sans-serif, Gudea, Arial,"微軟正黑體", "Microsoft JhengHei";
+  font-size: 15px;
+  color: #80db80;
+}
+
+/* line 73, ../sass/basic.scss */
+.fail {
+  font-family: "Raleway", Helvetica, sans-serif, Gudea, Arial,"微軟正黑體", "Microsoft JhengHei";
+  font-size: 15px;
+  color: #ff6464;
+}
+
+/* line 78, ../sass/basic.scss */
+.err-text-wrap {
+  top: 0;
+  left: 105%;
+  position: absolute;
+}
+
+/* line 83, ../sass/basic.scss */
+.err-text-area {
+  width: auto;
+  height: 30px;
+  padding: 0 10px 0 8px;
+  line-height: 30px;
+  border-radius: 3px;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 3px 3px 3px #bebebe;
+}
+
+/* line 93, ../sass/basic.scss */
+.err-text-area::before {
+  content: ' ';
+  width: 22px;
+  height: 22px;
+  left: -5px;
+  top: 4px;
+  border-radius: 3px;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: -3px 0 3px #bebebe;
+  transform: rotate(-45deg);
+  z-index: 1;
+}
+
+/* line 106, ../sass/basic.scss */
+.err-text-area::after {
+  content: ' ';
+  width: 19px;
+  height: 30px;
+  left: 2px;
+  top: 0;
+  border-radius: 6px;
+  position: absolute;
+  background-color: #fff;
+  z-index: 2;
+}
+
+/* line 117, ../sass/basic.scss */
+.err-text {
+  font-size: 15px;
+  color: #ff6464;
+  position: relative;
+  z-index: 3;
+}
+
+/* line 123, ../sass/basic.scss */
+body {
+  background-color: #fff;
+  background-image: url("../images/texture.png");
+  background-repeat: repeat;
+}
+
+/* line 128, ../sass/basic.scss */
+body::before {
+  content: '';
+  width: 95%;
+  height: 90%;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border: 3px double #bebebe;
+  position: fixed;
+}

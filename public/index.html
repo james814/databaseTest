@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>firebase test</title>
+    <link rel="icon" href="sticker.png" type="image/png">
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- <link rel="stylesheet" href="bootstrap.css"> -->
+    <link rel="stylesheet" href="style/stylesheets/basic.css">
+    <link rel="stylesheet" href="style/stylesheets/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="reg-area block">
+      <div class="regpage">
+        <div class="input-wrap">
+          <input type="text" id="account" placeholder="Account" maxlength="40">
+          <div class="err-text-wrap"><div class="err-text-area"><span class="err-text"></span></div></div>
+        </div>
+        <div class="input-wrap">
+          <input type="password" id="pwd" placeholder="Password" maxlength="12">
+        </div>
+        <button id="registerBtn" class="mediumbtn graybtn">Registration</button>
+      </div>
+      <div class="regSuccess success">
+        <!-- registration success! -->
+      </div>
+      <div class="regFail fail">
+
+      </div>
+      <div class="topic">
+        Nice to meet you first time,<br>
+        check your registration infomation correct.<br>
+        And hope you have fun here!
+      </div>
+    </div>
+  </body>
+</html>
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<script src="assets/javascripts/reg.js"></script>
+<script src="assets/javascripts/global.js"></script>
+<script>
+  // Initialize Firebase
+  var firebaseConfig = {
+    apiKey: "AIzaSyDm5BKl4Fby0GauQDXtM5vamEgG9R_RrwA",
+    authDomain: "firstbase-34584.firebaseapp.com",
+    databaseURL: "https://firstbase-34584.firebaseio.com",
+    projectId: "firstbase-34584", 
+    storageBucket: "firstbase-34584.appspot.com",
+    messagingSenderId: "444052802151"
+  };
+  firebase.initializeApp(firebaseConfig);
+
+ // Email/Pwd註冊
+  $("#registerBtn").click(function(){
+    var account = $("#account").val();
+    var pwd = $("#pwd").val();
+    firebase.auth()
+      .createUserWithEmailAndPassword(account, pwd)
+      .then(function(result){
+        console.log(result)
+        //驗證信
+        var user = firebase.auth().currentUser;
+        user.sendEmailVerification().then(function() {
+          console.log('Email sent.')
+        }).catch(function(error) {
+          // An error happened.
+        });
+      })
+      .catch(function(error) {
+        var errorCode = error.code;
+        var errorMsg = error.message;
+        console.log(errorCode, errorMsg);
+        //error 訊息
+      });
+  });
+</script>

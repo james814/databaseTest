@@ -1,0 +1,139 @@
+input{
+  font-size: 15px;
+  height: 30px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #bebebe;
+  background-color: rgba(255, 255, 255, 0);
+  letter-spacing: 1px;
+  caret-color: #8b8b8b;
+}
+input::placeholder{
+  color: #cecece;
+  transition: all .5s;
+}
+input:focus::placeholder{
+  color: transparent;
+  transition: all .5s;
+}
+.input-wrap{
+  position: relative;
+}
+button{
+  font-family: 'Courier New', Courier, monospace;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+  letter-spacing: 1px;
+  transition: all .5s;
+}
+.largebtn{
+  width: 200px;
+}
+.mediumbtn{
+  width: 150px;
+}
+.smallbtn{
+  width: 100px;
+}
+.graybtn{
+  color: #222;
+  border-color: #bebebe;
+}
+.graybtn:hover{
+  color: #2ebaae;
+  border-color: #2ebaae;
+  transition: all .5s;
+}
+.block{
+  padding: 50px 40px;
+  position: relative;
+}
+.topic{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: left;
+  color: #8b8b8b;
+  width: 500px;
+  bottom: 30px;
+  left: 350px;
+  position: absolute;
+}
+.success{
+  font-family: "Raleway", Helvetica, sans-serif, Gudea, Arial,"微軟正黑體", "Microsoft JhengHei";
+  font-size: 15px;
+  color: #80db80;
+}
+.fail{
+  font-family: "Raleway", Helvetica, sans-serif, Gudea, Arial,"微軟正黑體", "Microsoft JhengHei";
+  font-size: 15px;
+  color: #ff6464;
+}
+.err-text-wrap{
+  top: 0;
+  left: 105%;
+  position: absolute;
+}
+.err-text-area{
+  width: auto;
+  height: 30px;
+  padding: 0 10px 0 8px;
+  line-height: 30px;
+  border-radius: 3px;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 3px 3px 3px #bebebe;
+}
+.err-text-area::before{
+  content: ' ';
+  width: 22px;
+  height: 22px;
+  left: -5px;
+  top: 4px;
+  border-radius: 3px;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: -3px 0 3px #bebebe;
+  transform: rotate(-45deg);
+  z-index: 1;
+}
+.err-text-area::after{
+  content: ' ';
+  width: 19px;
+  height: 30px;
+  left: 2px;
+  top: 0;
+  border-radius: 6px;
+  position: absolute;
+  background-color: #fff;
+  z-index: 2;
+}
+.err-text{
+  font-size: 15px;
+  color: #ff6464;
+  position: relative;
+  z-index: 3;
+}
+body{
+  background-color: #fff;
+  background-image: url('../images/texture.png');
+  background-repeat: repeat;
+}
+body::before{
+  content: '';
+  width: 95%;
+  height: 90%;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border: 3px double #bebebe;
+  position: fixed;
+}
